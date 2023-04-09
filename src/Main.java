@@ -1,21 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-
-        Car[] cars = {
-                new Car("car1", 4),
-                new Car("car2", 4)};
-
-        Truck[] trucks = {
-                new Truck("truck1", 6),
-                new Truck("truck2", 8)};
-
-        Bicycle[] bicycles = {
-                new Bicycle("bicycle1", 2),
-                new Bicycle("bicycle2", 2)};
+        Transport[] transports = new Transport[]{
+                new Bicycle("Аист", 2),
+                new Bicycle("Stels", 2),
+                new Car("Audi", 4),
+                new Car("Ferrari", 4),
+                new Truck("Volvo", 6),
+                new Truck("Mercedes", 8)};
 
         ServiceStation station = new ServiceStation();
-        station.repair(cars);
-        station.repair(bicycles);
-        station.repair(trucks);
+        for (Transport transport : transports) {
+            station.check(transport);
+            System.out.println();
+        }
+
+
     }
 }
